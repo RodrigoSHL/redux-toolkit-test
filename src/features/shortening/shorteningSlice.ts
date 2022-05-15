@@ -36,6 +36,5 @@ export const { setShorteningCountryList } = shorteningSlice.actions;
 
 //State-Reducer
 export const selectShortening = (state: RootState) => state.shortening;
-
 //Reducer
 export default shorteningSlice.reducer;
