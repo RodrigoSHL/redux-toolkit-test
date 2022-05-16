@@ -4,8 +4,8 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Home from "../components/Home/Home";
 import Factors from "../components/Shortening/Factors/Factors";
+import Resume from "../components/Shortening/Resume/Resume";
 import { Counter } from "../features/counter/Counter";
 import ProtectedRoutes from "./ProtectedRoutes";
 
@@ -15,7 +15,8 @@ const Navigation = () => {
       <Routes>
         <Route path="/" element={<Factors />} />
         <Route element={<ProtectedRoutes />}>
-          <Route path="/home" element={<Counter />} />
+          <Route path="/counter" element={<Counter />} />
+          <Route path="/resume" element={<Resume />} />
         </Route>
       </Routes>
     </BrowserRouter>

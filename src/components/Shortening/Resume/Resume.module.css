@@ -7,3 +7,18 @@
   flex-grow: 1;
   padding: 3;
 }
+
+.content {
+  margin: 20px;
+  padding: 20px;
+}
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filter {
+  display: flex;
+  justify-content: flex-end;
+}
