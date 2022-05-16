@@ -1,7 +1,7 @@
 import { Alert, AlertProps, Box, Paper, Snackbar, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Filters from "./Filters";
-import styles from "./Factor.module.css";
+import styles from "./Factors.module.css";
 import {DataGrid,  esES,  GridCellEditCommitParams} from '@mui/x-data-grid';
 import axios from "axios";
 import DownloadButton from "./DownloadButton";
@@ -45,7 +45,7 @@ const Table = () => {
         const objFactor = {
           factorValue: params.value,
         };
-        const url = `${api_rest}/api/prv-factor/${params.id}`;
+        const url = `${api_rest}/api/factor/${params.id}`;
         await axios
           .put(url, objFactor)
           .then((response) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import Factors from '../Factor';
+import Factors from '../Factors';
 import { store } from '../../../../app/store';
 
 test('renders learn react link', () => {

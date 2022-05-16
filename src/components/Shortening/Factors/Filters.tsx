@@ -17,7 +17,7 @@ import {
   getClacomDataByParameters,
   selectShortening,
 } from "../../../features/shortening/shorteningSlice";
-import styles from "./Factor.module.css";
+import styles from "./Factors.module.css";
 
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";

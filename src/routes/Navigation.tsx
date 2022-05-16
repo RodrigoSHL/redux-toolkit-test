@@ -5,7 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 import Home from "../components/Home/Home";
-import Factors from "../components/Shortening/Factors/Factor";
+import Factors from "../components/Shortening/Factors/Factors";
 import { Counter } from "../features/counter/Counter";
 import ProtectedRoutes from "./ProtectedRoutes";
 

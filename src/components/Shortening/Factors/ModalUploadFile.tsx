@@ -16,7 +16,7 @@ import UploadFileIcon from '@mui/icons-material/UploadFile';
 import IconButton from '@mui/material/IconButton';
 import ClearIcon from '@mui/icons-material/Clear';
 import SaveIcon from '@mui/icons-material/Save';
-import styles from "./Factor.module.css";
+import styles from "./Factors.module.css";
 
 import axios from 'axios';
 import {LoadingButton} from '@mui/lab';
