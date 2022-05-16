@@ -5,9 +5,11 @@ import { store } from '../../app/store';
 import { Counter } from './Counter';
 
 test('renders learn react link', () => {
-  const html = render(
+  const { getByText } = render(
     <Provider store={store}>
       <Counter />
     </Provider>
   );
+  expect(getByText(/add amount/i)).toBeInTheDocument();
+
 });
