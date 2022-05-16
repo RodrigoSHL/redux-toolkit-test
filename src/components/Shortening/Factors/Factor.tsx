@@ -13,7 +13,7 @@ const Factors = () => {
             flexDirection: "row",
           }}
         >
-          <Box component="main" mt={6} sx={{ flexGrow: 1, p: 3 }}>
+          <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
             <Table/>
           </Box>
         </Box>
