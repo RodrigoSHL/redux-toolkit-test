@@ -2,12 +2,14 @@ import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import counterReducer from '../features/counter/counterSlice';
 import shorteningReducer from '../features/shortening/shorteningSlice';
 import paramReducer from '../features/param/paramSlice';
+import accountBalanceReducer from '../features/accountBalance/accountBalanceSlice';
 
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
     shortening: shorteningReducer,
-    param: paramReducer
+    param: paramReducer,
+    accountBalance: accountBalanceReducer
   },
 });
 

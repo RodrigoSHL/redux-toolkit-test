@@ -7,11 +7,15 @@ export const initialStateShortening = {
   listShorteningResumeData: [],
 };
 
-
 /* Params/Maintainer */
 export const initialStateParam = {
   listAllCountry: [],
   listAllBusinessUnit: [],
   listAllBranchOffice: [],
   listAllClacom: [],
+};
+
+/* AccountBalance */
+export const initialStateAccountBalance = {
+  listDataAccountBalance: []
 };
