@@ -29,7 +29,7 @@ const Table = () => {
       type: 'number',
       editable: true,
       width: 230,
-    },
+    }
   ];
 
   const [snackbar, setSnackbar] = React.useState<Pick<

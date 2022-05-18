@@ -2,9 +2,9 @@ import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { initialStateShortening } from '../../app/initialVariable';
 import { RootState } from '../../app/store';
+import config from '../../config';
 
-const api_rest = 'http://localhost:3001'
-
+const api_rest = config['api_sql_url'];
 export interface CounterState {
   value: number;
   status: 'idle' | 'loading' | 'failed';

@@ -2,8 +2,9 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
 import { initialStateParam } from "../../app/initialVariable";
 import { AppThunk, RootState } from "../../app/store";
-const api_rest = 'http://localhost:3001'
+import config from '../../config';
 
+const api_rest = config['api_sql_url'];
 
 export interface CounterState {
   value: number;

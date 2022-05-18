@@ -5,8 +5,9 @@ import Input from './Input';
 import axios from 'axios';
 import Snackbar from '@mui/material/Snackbar';
 import styles from "./AccountBalance.module.css";
+import config from '../../config';
 
-const api_rest = 'http://localhost:3001'
+const api_rest = config['api_sql_url'];
 
 const Table = () => {
   const [clacomsList, setClacomsList] = useState<any>([]);
