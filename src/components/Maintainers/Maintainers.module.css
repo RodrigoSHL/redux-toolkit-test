@@ -1,0 +1,20 @@
+.content {
+  margin: 20px;
+  padding: 20px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+
+.containerTable {
+  flex-grow: 1;
+  padding: 3;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+}

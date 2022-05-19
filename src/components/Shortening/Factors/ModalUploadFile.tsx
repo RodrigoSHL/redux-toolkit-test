@@ -20,6 +20,7 @@ import styles from "./Factors.module.css";
 
 import axios from 'axios';
 import {LoadingButton} from '@mui/lab';
+import { errorAlert, successAlertResponseFile } from '../../Middleware/Alerts';
 
 const api_rest = 'http://localhost:3001'
 
@@ -77,11 +78,13 @@ const ModalUploadFile = ({anchorEl, setAnchorEl}:any) => {
       .then((response) => {
         console.log('response', response);
         handleClose();
+        successAlertResponseFile(response.data.resume);
         setAnchorEl(null)
       })
       .catch((error) => {
         console.log('error', error);
         handleClose();
+        errorAlert();
         setAnchorEl(null)
       });
   };

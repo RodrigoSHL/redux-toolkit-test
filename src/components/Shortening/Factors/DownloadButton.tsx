@@ -74,7 +74,7 @@ const DownloadButton = () => {
           <ListItemText>Descargar Plantilla</ListItemText>
         </MenuItem>
         <Divider />
-        <ModalUploadFile/>
+        <ModalUploadFile anchorEl={anchorEl} setAnchorEl={setAnchorEl} />
       </Menu>
       {!!snackbar && (
         <Snackbar open onClose={handleCloseSnackbar} autoHideDuration={4000}>
