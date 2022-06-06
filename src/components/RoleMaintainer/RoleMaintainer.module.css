@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.containerTable {
+  flex-grow: 1;
+  padding: 3;
+  margin-top: 6;
+}
+
+.content {
+  margin: 20px;
+  padding: 20px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.title {
+  text-align: left;
+  margin: 20px;
+}
+
+.tableContainer {
+  border-radius: 15;
+  margin: 20px auto;
+  min-width: 450;
+  min-height: 350;
+  max-width: 1100;
+  max-height: 600;
+}
+
+.tableHeaderCell {
+  font-weight: bold;
+  background-color: #7a7a7a; 
+  color: #ffffff;
+}
+
+.avatar {
+  background-color: #8c8383;
+  color: #ffffff;
+}
+
+.name {
+  font-weight: bold;
+  color: #8c8383;
+}
+
+.status {
+  font-weight: bold;
+  font-size: 0.75rem;
+  color: white;
+  background-color: grey;
+  border-radius: 8px;
+  padding: 3px 10px;
+  display: inline-block;
+}
+

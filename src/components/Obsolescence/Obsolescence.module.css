@@ -1,3 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.containerTable {
+  flex-grow: 1;
+  padding: 3;
+  margin-top: 6;
+}
+
 .content {
   margin: 20px;
   padding: 20px;
@@ -7,13 +18,4 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-}
-
-.containerTable {
-  flex-grow: 1;
-  padding: 3;
-}
-.container {
-  display: flex;
-  flex-direction: row;
 }

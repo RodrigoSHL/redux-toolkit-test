@@ -1,9 +1,9 @@
 import { Box, Container, CssBaseline } from "@mui/material";
 import React from "react";
 import Table from "./Table";
-import styles from "./AccountBalance.module.css";
+import styles from "./Obsolescence.module.css";
 
-const AccountBalance = () => {
+const Obsolescence = () => {
   return (
     <>
       <CssBaseline />
@@ -18,4 +18,4 @@ const AccountBalance = () => {
   );
 };
 
-export default AccountBalance;
+export default Obsolescence;

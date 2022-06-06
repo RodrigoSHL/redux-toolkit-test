@@ -19,3 +19,19 @@ export const initialStateParam = {
 export const initialStateAccountBalance = {
   listDataAccountBalance: []
 };
+
+/* Usuario */
+export const initialStateGetUser = {
+  idUser: 0,
+  mailUser: '',
+  firstNameUser: '',
+  lastNameUser: '',
+  displayNameUser: '',
+  stateUser: false,
+};
+
+export const initialStateUser = {
+  listUsers: [],
+  listAllUsers: [],
+  dataUser: {...initialStateGetUser},
+};

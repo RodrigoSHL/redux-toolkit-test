@@ -4,9 +4,7 @@ import {
   List,
   ListItem,
   ListItemIcon,
-  ListItemText,
-  Toolbar,
-  Typography,
+  ListItemText
 } from "@mui/material";
 import MailIcon from "@mui/icons-material/Mail";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
@@ -16,9 +14,8 @@ import { useState } from "react";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import { styled, useTheme, Theme, CSSObject } from "@mui/material/styles";
-import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
-import MenuIcon from '@mui/icons-material/Menu';
 import Navigation from "../../routes/Navigation";
+import Navbar from "./NavBar/NavBar";
 
 const drawerWidth = 240;
 const openedMixin = (theme: Theme): CSSObject => ({
@@ -68,27 +65,7 @@ const Drawer = styled(MUIDrawer, {
   }),
 }));
 
-interface AppBarProps extends MuiAppBarProps {
-    open?: boolean;
-  }
-  
-  const AppBar = styled(MuiAppBar, {
-    shouldForwardProp: (prop) => prop !== 'open',
-  })<AppBarProps>(({ theme, open }) => ({
-    zIndex: theme.zIndex.drawer + 1,
-    transition: theme.transitions.create(['width', 'margin'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    ...(open && {
-      marginLeft: drawerWidth,
-      width: `calc(100% - ${drawerWidth}px)`,
-      transition: theme.transitions.create(['width', 'margin'], {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.enteringScreen,
-      }),
-    }),
-  }));
+
 
 const Home = () => {
   let navigate = useNavigate();
@@ -119,33 +96,21 @@ const Home = () => {
       onClick: () => navigate("/resume"),
     },
     {
-      text: "Contact",
+      text: "Maintainer",
       icon: <MailIcon />,
       onClick: () => navigate("/maintainers"),
+    },
+    {
+      text: "Users",
+      icon: <InboxIcon />,
+      onClick: () => navigate("/user"),
     },
   ];
 
   return (
     <Box>
-        <AppBar position="fixed" open={open}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            sx={{
-              marginRight: 5,
-              ...(open && { display: 'none' }),
-            }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Mini variant drawer
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      <Navbar drawerWidth={drawerWidth} open={open} handleDrawerOpen={handleDrawerOpen} />
+
       <Drawer open={open} variant="permanent">
         
         <DrawerHeader>

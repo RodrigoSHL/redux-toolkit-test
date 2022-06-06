@@ -7,6 +7,8 @@ import Maintainers from "../components/Maintainers/Maintainers";
 
 import { Counter } from "../features/counter/Counter";
 import ProtectedRoutes from "./ProtectedRoutes";
+import Obsolescence from "../components/Obsolescence/Obsolescence";
+import RoleMaintainer from "../components/RoleMaintainer/RoleMaintainer";
 
 const Navigation = () => {
   return (
@@ -18,6 +20,8 @@ const Navigation = () => {
           <Route path="/resume" element={<Resume />} />
           <Route path="/balance" element={<AccountBalance />} />
           <Route path="/maintainers" element={<Maintainers />} />
+          <Route path="/obsolescence" element={<Obsolescence />} />
+          <Route path="/user" element={<RoleMaintainer />} />
         </Route>
       </Routes>
     </>
