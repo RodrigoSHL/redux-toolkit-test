@@ -34,15 +34,15 @@ const NavAvatar: React.FC<Props> = ({userName}) => {
     };
   }
 
-  useEffect(() => {
-    //Redirects to login after localStorage is not found
-    if (localStorage.getItem('_loggedIn_') !== 'true') {
-      setColorLive(colorOffLive);
-      setTimeout(function () {
-        navigate('/');
-      }, 5000);
-    }
-  }, []);
+  // useEffect(() => {
+  //   //Redirects to login after localStorage is not found
+  //   if (localStorage.getItem('_loggedIn_') !== 'true') {
+  //     setColorLive(colorOffLive);
+  //     setTimeout(function () {
+  //       navigate('/');
+  //     }, 5000);
+  //   }
+  // }, []);
 
   const StyledBadge = styled(Badge)(({theme}) => ({
     '& .MuiBadge-badge': {
@@ -83,7 +83,7 @@ const NavAvatar: React.FC<Props> = ({userName}) => {
   };
 
   const goToProfile = () => {
-    navigate('/user/profile');
+    navigate('/profile');
   };
 
   return (

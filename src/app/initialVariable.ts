@@ -1,3 +1,7 @@
+import { AlertColor } from "@mui/material";
+
+const severityColor:AlertColor = 'warning'
+
 /* Shortening */
 export const initialStateShortening = {
   listShorteningCountry: [],
@@ -35,3 +39,16 @@ export const initialStateUser = {
   listAllUsers: [],
   dataUser: {...initialStateGetUser},
 };
+
+/*Snackbar */
+export const initialStateSetSnackbar = {
+  isOpen: false,
+  message: '',
+  severity: severityColor,
+  timeOut: 0
+}
+
+export const initialStateSnack = {
+  dataSnackbar: {...initialStateSetSnackbar}
+}
+

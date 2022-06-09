@@ -9,6 +9,7 @@ import { Counter } from "../features/counter/Counter";
 import ProtectedRoutes from "./ProtectedRoutes";
 import Obsolescence from "../components/Obsolescence/Obsolescence";
 import RoleMaintainer from "../components/RoleMaintainer/RoleMaintainer";
+import UserProfile from "../components/UserProfile/UserProfile";
 
 const Navigation = () => {
   return (
@@ -22,6 +23,8 @@ const Navigation = () => {
           <Route path="/maintainers" element={<Maintainers />} />
           <Route path="/obsolescence" element={<Obsolescence />} />
           <Route path="/user" element={<RoleMaintainer />} />
+          <Route path="/profile" element={<UserProfile />} />
+
         </Route>
       </Routes>
     </>

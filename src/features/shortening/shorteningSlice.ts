@@ -5,10 +5,6 @@ import { RootState } from '../../app/store';
 import config from '../../config';
 
 const api_rest = config['api_sql_url'];
-export interface CounterState {
-  value: number;
-  status: 'idle' | 'loading' | 'failed';
-}
 
 //Negocio
 export const getAllCountries = () => (dispatch:any) => {

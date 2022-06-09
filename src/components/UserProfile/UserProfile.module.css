@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.containerTable {
+  flex-grow: 1;
+  padding: 3;
+  margin-top: 6;
+}
+
+.content {
+  margin: 20px;
+  padding: 20px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  margin: 5;
+  background: #716fa3;
+  min-width: 100px;
+  min-height: 100px;
+}
+
+.paper {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-top: 20px;
+}

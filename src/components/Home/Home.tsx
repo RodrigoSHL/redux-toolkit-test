@@ -16,6 +16,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import { styled, useTheme, Theme, CSSObject } from "@mui/material/styles";
 import Navigation from "../../routes/Navigation";
 import Navbar from "./NavBar/NavBar";
+import Snackbar from "../Middleware/Snackbar";
 
 const drawerWidth = 240;
 const openedMixin = (theme: Theme): CSSObject => ({
@@ -105,6 +106,11 @@ const Home = () => {
       icon: <InboxIcon />,
       onClick: () => navigate("/user"),
     },
+    {
+      text: "Profile",
+      icon: <MailIcon />,
+      onClick: () => navigate("/profile"),
+    },
   ];
 
   return (
@@ -137,6 +143,7 @@ const Home = () => {
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
         <Navigation/>
+        <Snackbar/>
       </Box>
     </Box>
   );

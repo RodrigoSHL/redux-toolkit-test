@@ -77,7 +77,10 @@ const DownloadButton = () => {
         <ModalUploadFile anchorEl={anchorEl} setAnchorEl={setAnchorEl} />
       </Menu>
       {!!snackbar && (
-        <Snackbar open onClose={handleCloseSnackbar} autoHideDuration={4000}>
+        <Snackbar 
+        open 
+        onClose={handleCloseSnackbar} 
+        autoHideDuration={4000}>
           <Alert {...snackbar} onClose={handleCloseSnackbar} />
         </Snackbar>
       )}

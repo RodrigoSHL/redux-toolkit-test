@@ -4,6 +4,7 @@ import shorteningReducer from '../features/shortening/shorteningSlice';
 import paramReducer from '../features/param/paramSlice';
 import accountBalanceReducer from '../features/accountBalance/accountBalanceSlice';
 import userReducer from '../features/user/userSlice';
+import snackbarReducer from '../features/snackbar/snackbarSlice';
 
 export const store = configureStore({
   reducer: {
@@ -11,7 +12,8 @@ export const store = configureStore({
     counter: counterReducer,
     shortening: shorteningReducer,
     param: paramReducer,
-    accountBalance: accountBalanceReducer
+    accountBalance: accountBalanceReducer,
+    snackbar: snackbarReducer
   },
 });
 

@@ -1,14 +1,20 @@
-import { Alert, AlertProps, Box, Paper, Snackbar, Typography } from "@mui/material";
+import { Alert, AlertProps, Box, Button, Paper, Snackbar, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Filters from "./Filters";
 import styles from "./Factors.module.css";
 import {DataGrid,  esES,  GridCellEditCommitParams} from '@mui/x-data-grid';
 import axios from "axios";
 import DownloadButton from "./DownloadButton";
+import { useAppDispatch } from "../../../app/hooks";
+import { setOpenSnackbar } from "../../../features/snackbar/snackbarSlice";
+import { AlertColor } from "@mui/material";
 
 const api_rest = 'http://localhost:3001'
 
+const severityColor:AlertColor = 'warning'
+
 const Table = () => {
+  const dispatch = useAppDispatch();
   const [clacomsList, setClacomsList] = useState<any>([]);
   const [clacomsFilterList, setClacomsFilterList] = useState<any>([]);
   const [filterApplied, setFilterApplied] = useState<boolean>(false);
@@ -68,12 +74,25 @@ const Table = () => {
     []
   );
 
+  const testing = (e:any) => {
+    e.preventDefault();
+    const objSetting = {
+      isOpen: true,
+      message: 'Hola probando objetos setting',
+      severity: severityColor,
+      timeOut : 6000
+    }
+    dispatch(setOpenSnackbar(objSetting))
+  }
+
   return (
     <Paper className={styles.content}>
       <Box className={styles.toolbar}>
         <Typography variant="h6" component="h2" color="primary">
           Factores
         </Typography>
+        <Button onClick={testing} variant="contained">Contained</Button>
+
         <DownloadButton/>
       </Box>
       <Box className={styles.toolbar}>
@@ -91,11 +110,7 @@ const Table = () => {
           onCellEditCommit={handleCellEditCommit}
           localeText={esES.components.MuiDataGrid.defaultProps.localeText}
         />
-        {!!snackbar && (
-          <Snackbar open onClose={handleCloseSnackbar} autoHideDuration={3000}>
-            <Alert {...snackbar} onClose={handleCloseSnackbar} />
-          </Snackbar>
-        )}
+
       </Box>
     </Paper>
   );
