@@ -7,11 +7,9 @@ import axios from "axios";
 import DownloadButton from "./DownloadButton";
 import { useAppDispatch } from "../../../app/hooks";
 import { setOpenSnackbar } from "../../../features/snackbar/snackbarSlice";
-import { AlertColor } from "@mui/material";
+import { errorColor, successColor } from "../../Middleware/Snackbar";
 
 const api_rest = 'http://localhost:3001'
-
-const severityColor:AlertColor = 'warning'
 
 const Table = () => {
   const dispatch = useAppDispatch();
@@ -38,13 +36,6 @@ const Table = () => {
     }
   ];
 
-  const [snackbar, setSnackbar] = React.useState<Pick<
-    AlertProps,
-    'children' | 'severity'
-  > | null>(null);
-
-  const handleCloseSnackbar = () => setSnackbar(null);
-
   const handleCellEditCommit = React.useCallback(
     async (params: GridCellEditCommitParams) => {
       try {
@@ -55,35 +46,20 @@ const Table = () => {
         await axios
           .put(url, objFactor)
           .then((response) => {
-            setSnackbar({
-              children: 'Factor editado correctamente',
-              severity: 'success',
-            });
+            const objSetting = {isOpen: true,message: 'Factor editado correctamente',severity: successColor,timeOut : 2000}
+            dispatch(setOpenSnackbar(objSetting));   
           })
           .catch((error) => {
-            setSnackbar({
-              children: error.message,
-              severity: 'error',
-            });
+            const objSetting = {isOpen: true,message: error.message,severity: errorColor,timeOut : 2000}
+            dispatch(setOpenSnackbar(objSetting));
           });
-        clacomsList((prev:any) => prev.map((row:any) => (row.id === params.id ? {...row} : row)));
+        setClacomsList((prev:any) => prev.map((row:any) => (row.id === params.id ? {...row} : row)));
       } catch (error) {
-        clacomsList((prev:any) => [...prev]);
+        setClacomsList((prev:any) => [...prev]);
       }
     },
     []
   );
-
-  const testing = (e:any) => {
-    e.preventDefault();
-    const objSetting = {
-      isOpen: true,
-      message: 'Hola probando objetos setting',
-      severity: severityColor,
-      timeOut : 6000
-    }
-    dispatch(setOpenSnackbar(objSetting))
-  }
 
   return (
     <Paper className={styles.content}>
@@ -91,8 +67,6 @@ const Table = () => {
         <Typography variant="h6" component="h2" color="primary">
           Factores
         </Typography>
-        <Button onClick={testing} variant="contained">Contained</Button>
-
         <DownloadButton/>
       </Box>
       <Box className={styles.toolbar}>
@@ -110,7 +84,6 @@ const Table = () => {
           onCellEditCommit={handleCellEditCommit}
           localeText={esES.components.MuiDataGrid.defaultProps.localeText}
         />
-
       </Box>
     </Paper>
   );

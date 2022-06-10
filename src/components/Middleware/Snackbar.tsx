@@ -8,7 +8,13 @@ import {
   openSnackbar,
   selectSnackbar,
 } from "../../features/snackbar/snackbarSlice";
-import { Alert } from "@mui/material";
+import { Alert, AlertColor } from "@mui/material";
+
+export const warningColor:AlertColor = 'warning'
+export const successColor:AlertColor = 'success'
+export const errorColor:AlertColor = 'error'
+export const infoColor:AlertColor = 'info'
+
 
 export default function SimpleSnackbar() {
   const objSnackbar = useAppSelector(selectSnackbar);
