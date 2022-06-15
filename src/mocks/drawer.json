@@ -1,0 +1,40 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "name": "OOOObsolescencia",
+      "path": "/obsolescencia",
+      "icon": "<InboxIcon />"
+    },
+    {
+      "id": 2,
+      "name": "Remates",
+      "path": "/remate",
+      "icon": "<InboxIcon />"
+    },
+    {
+      "id": 3,
+      "name": "Acortamiento",
+      "path": "/acortamiento",
+      "icon": "<InboxIcon />"
+    },
+    {
+      "id": 4,
+      "name": "Realizacion",
+      "path": "/realizacion",
+      "icon": "<MailIcon />"
+    },
+    {
+      "id": 5,
+      "name": "Ventas no Realizadas",
+      "path": "/noRealizacion",
+      "icon": "<MailIcon />"
+    },
+    {
+      "id": 6,
+      "name": "Varios",
+      "path": "/varios",
+      "icon": "<MailIcon />"
+    }
+  ]
+}

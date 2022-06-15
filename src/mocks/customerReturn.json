@@ -1,0 +1,25 @@
+[
+      {
+        "id": 1,
+        "item": "Costo",
+        "factorPeriod1": "0",
+        "factorPeriod2": "0",
+        "factorAverage": "6,78",
+        "AmountToConsider": "45.345.123",
+        "IndexPeriod": "0",
+        "AccumulatedProvision": "675.345.123"
+      },
+      {
+        "id": 2,
+        "item": "Venta",
+        "factorPeriod1": "0",
+        "factorPeriod2": "0",
+        "factorAverage": "3,48",
+        "AmountToConsider": "5.221.923",
+        "IndexPeriod": "0",
+        "AccumulatedProvision": "75.591.321"
+      }
+      
+]
+  
+  

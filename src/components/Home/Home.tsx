@@ -111,6 +111,11 @@ const Home = () => {
       icon: <MailIcon />,
       onClick: () => navigate("/profile"),
     },
+    {
+      text: "Customer Return",
+      icon: <InboxIcon />,
+      onClick: () => navigate("/customerReturn"),
+    },
   ];
 
   return (

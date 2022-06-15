@@ -20,19 +20,19 @@ const Table = () => {
     {
       field: 'nameClacom',
       headerName: 'Descripción',
-      width: 300,
+      width: 300
     },
     {
       field: 'codeClacom',
       headerName: 'Clacom',
-      width: 230,
+      width: 230
     },
     {
       field: 'factorValue',
       headerName: 'Factor',
       type: 'number',
       editable: true,
-      width: 230,
+      width: 230
     }
   ];
 

@@ -10,6 +10,7 @@ import ProtectedRoutes from "./ProtectedRoutes";
 import Obsolescence from "../components/Obsolescence/Obsolescence";
 import RoleMaintainer from "../components/RoleMaintainer/RoleMaintainer";
 import UserProfile from "../components/UserProfile/UserProfile";
+import CustomerReturn from "../components/CustomerReturn/CustomerReturn";
 
 const Navigation = () => {
   return (
@@ -24,6 +25,7 @@ const Navigation = () => {
           <Route path="/obsolescence" element={<Obsolescence />} />
           <Route path="/user" element={<RoleMaintainer />} />
           <Route path="/profile" element={<UserProfile />} />
+          <Route path="/customerReturn" element={<CustomerReturn />} />
 
         </Route>
       </Routes>
